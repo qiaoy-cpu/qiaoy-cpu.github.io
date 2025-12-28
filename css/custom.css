@@ -1,0 +1,57 @@
+/* 隐藏所有非首页的横幅图片 */
+body:not(.index) #banner,
+body:not(.index) .full-bg-img {
+  display: none !important;
+}
+
+/* 调整非首页的header高度 */
+body:not(.index) .header-inner {
+  height: 60vh !important;
+}
+
+/* 只在首页显示横幅图片 */
+.index #banner,
+.index .full-bg-img {
+  display: block !important;
+}
+
+/* 隐藏使用默认图片的横幅 */
+#banner[style*="/img/default.png"] {
+  display: none !important;
+}
+
+/* 隐藏非首页的横幅图片 */
+body:not([data-page="index"]) #banner,
+body:not([data-page="index"]) .full-bg-img {
+  display: none !important;
+}
+
+/* 调整非首页的header高度 */
+body:not([data-page="index"]) .header-inner {
+  height: 60vh !important;
+}
+
+/* 确保首页横幅图片正确显示 */
+#banner[style*="/img/bg/bg1.png"] {
+  display: block !important;
+}
+
+/* 确保首页的full-bg-img显示 */
+#banner[style*="/img/bg/bg1.png"] + .full-bg-img {
+  display: block !important;
+}
+
+/* 调整首页的header高度 */
+body[data-page="index"] .header-inner {
+  height: 100vh !important;
+}
+
+/* 隐藏所有页面的默认横幅图片 */
+.full-bg-img .mask[style*="rgba(0, 0, 0, 0.3)"] {
+  display: none !important;
+}
+
+/* 只在首页显示横幅遮罩 */
+#banner[style*="/img/bg/bg1.png"] + .full-bg-img .mask {
+  display: flex !important;
+}
