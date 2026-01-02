@@ -1,0 +1,7 @@
+.footer.footer-inner.footer-content::before {
+    content: "© 2026 Jo Jo's Blog | GitHub | Twitter | Email";
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
